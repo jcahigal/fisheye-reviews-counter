@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Fisheye Reviews Counter",
+  "description": "Counter the current open reviews",
+  "permissions": ["declarativeContent", "storage", "activeTab"],
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "version": "1.0",
+  "icons": {
+    "32": "images/fisheye_32.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["https://*/cru/*"]
+    }
+  ]
+}
